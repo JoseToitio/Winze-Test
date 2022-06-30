@@ -1,4 +1,4 @@
-import { HeaderStyle } from '../styles/Header.styles';
+import { HeaderStyle } from './styles/Header.styles';
 import React from 'react';
 import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
@@ -15,7 +15,7 @@ export default function Header() {
           </picture>
             <ul>
               <li>
-                <a>Clube</a>
+                <a href='a'>Clube</a>
               </li>
               <li>
                 <a>Loja</a>
@@ -31,9 +31,7 @@ export default function Header() {
               </li>
             </ul>
             <div>
-              <a><AiOutlineSearch style={{fontSize: 46}}/></a>
-              <a><CgProfile style={{fontSize: 46}}/></a>
-              <a><AiOutlineShoppingCart style={{fontSize: 46}}/></a>
+
             </div>
           </nav>
       </HeaderStyle>
