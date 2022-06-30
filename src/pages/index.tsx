@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {wineApi} from '../services/Api';
+import Header from '../components/Header';
 
 export default function HomePage() {
   
@@ -20,6 +21,7 @@ export default function HomePage() {
   }, [])
   return (
     <div>
+      <Header />
       {wine.map((w: wine, index) => (
         <div key={w.id}>
           <p>
