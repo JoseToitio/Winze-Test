@@ -41,12 +41,12 @@ export default function DetailsProducts(props) {
                   </div>
                   <p>{wine.country}</p>
                   <p>{wine.classification}</p>
-                  <p>{wine.size}</p>
+                  <p>{wine.size || wine.volume}</p>
                   <AiFillStar color="orange" />
                   <AiFillStar color="orange" />
                   <AiFillStar color="orange" />
                   <AiFillStar color="orange" />
-                  <p>{`(${wine.rating})`}</p>
+                  <p>{`(${wine.avaliations ? wine.avaliations: wine.rating})`}</p>
                 </div>
                 <div className="priceDiv">
                   <h1>

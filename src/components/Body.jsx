@@ -139,7 +139,20 @@ export default function Body() {
                   </div>
                 }
               />
-              <span>R${w.price}</span>
+               <div className="priceDiv">
+                  <div className="discountDiv">
+                    <span>R${w.price}</span>
+                    <div className="divDiscount">
+                      <span className="discount">{w.discount}% OFF</span>
+                    </div>
+                  </div>
+                  <h1>
+                    SÓCIO WINE <span><span className="cifrao">R$</span>{w.priceMember}</span>
+                  </h1>
+                  <h5>{`NÃO SÓCIO R$ ${w.priceNonMember}/UN`}</h5>
+                  
+                </div>
+
             </Container>
             <DivButton>
               <button>Adicionar</button>

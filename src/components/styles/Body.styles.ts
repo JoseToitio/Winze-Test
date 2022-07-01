@@ -12,8 +12,8 @@ export const Container = styled.div`
   width: 450px;
   height: 400px;
   max-width: 300px;
-  max-height: 300px;
-  border-radius: 4px;
+  max-height: 350px;
+  border-radius: 5px;
   border-width: 2px;
   cursor: pointer;
   picture {
@@ -21,7 +21,7 @@ export const Container = styled.div`
     justify-content: center;
   }
   img {
-    max-width:115px;
+    max-width:105px;
     max-height:176px;
     width: auto;
     height: auto;
@@ -31,6 +31,59 @@ export const Container = styled.div`
     flex-wrap: wrap;
     font-weight: bold;
     text-align: center;
+  }
+
+  .priceDiv {
+    h1 {
+      color: #c81a79;
+      font-size: 13px;
+      span {
+        font-size: 20px;
+        font-weight: 700;
+        color: #c81a79;
+        text-decoration: none;
+      }
+    }
+
+    .discountDiv {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      .divDiscount {
+        display: flex;
+        border-radius: 5px;
+        border-width: 2px;
+        display: flex;
+        text-align: center;
+      }
+      .discount{
+        margin-left: 20px;
+        width: 70px;
+        height: 20px;
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: orange;
+        border-color: orange;
+        border-radius: 4px
+      }
+    }
+
+    span {
+      color: gray;
+      text-decoration: line-through;
+    }
+    h5 {
+      margin-top: -5px;
+      color: gray
+    }
+
+    h1 {
+      color: black
+    }
+
+    .cifrao {
+      font-size: 13px;
+    }
   }
 `
 
