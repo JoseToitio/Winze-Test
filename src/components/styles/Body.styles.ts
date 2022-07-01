@@ -15,6 +15,7 @@ export const Container = styled.div`
   max-height: 300px;
   border-radius: 4px;
   border-width: 2px;
+  cursor: pointer;
   picture {
     display: flex;
     justify-content: center;
@@ -28,6 +29,8 @@ export const Container = styled.div`
 
   p {
     flex-wrap: wrap;
+    font-weight: bold;
+    text-align: center;
   }
 `
 

@@ -50,6 +50,7 @@ export default function Body() {
       console.log(wineFilter);
     }
     
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wine, inputValue])
 
   return (
@@ -124,7 +125,7 @@ export default function Body() {
           <div key={w.id}>
             <Container>
               <Navegador
-                destino={w.id.toString()}
+                destino={`/produto/${w.id.toString()}`}
                 nome={
                   <div>
                     <picture>
@@ -138,7 +139,7 @@ export default function Body() {
                   </div>
                 }
               />
-              <p>R${w.price}</p>
+              <span>R${w.price}</span>
             </Container>
             <DivButton>
               <button>Adicionar</button>
