@@ -122,8 +122,10 @@ export const DivButton = styled.div`
 `
 
 export const Busca = styled.div`
-  display: block;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  max-width: 500px;
   padding-left: 50px;
   padding-top: 10px;
 
