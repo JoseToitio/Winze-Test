@@ -34,7 +34,7 @@ export const Container = styled.div`
 export const DivContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  /* padding: 20px; */
   justify-content: right;
   
   div {
@@ -67,13 +67,18 @@ export const DivButton = styled.div`
 
 export const Busca = styled.div`
   display: block;
-  width: 200px;
-  padding-bottom: 50px;
+  width: 400px;
+  padding-left: 50px;
+  padding-top: 10px;
+
   div {
     padding: 4px;
     label {
     padding-left: 10px;
   }
   }
+`
 
+export const DivPrincipal = styled.div`
+  display: flex;
 `
