@@ -1,7 +1,8 @@
-import { HeaderStyle } from './styles/Header.styles';
+import { HeaderStyle, DivHeader } from './styles/Header.styles';
 import React from 'react';
 import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
+import Navegador from '../components/Navegador';
 
 const imageUrl ='https://img.wine.com.br/logo/wine/black/wine.svg'
 
@@ -15,7 +16,7 @@ export default function Header() {
           </picture>
             <ul>
               <li>
-                <a href='a'>Clube</a>
+                <Navegador destino="/clube" nome="Clube"/>
               </li>
               <li>
                 <a>Loja</a>
@@ -30,9 +31,17 @@ export default function Header() {
                 <a>Eventos</a>
               </li>
             </ul>
-            <div>
-
-            </div>
+            <DivHeader>
+              <div>
+                <AiOutlineSearch style={{fontSize: 30, cursor: 'pointer'}} />
+              </div>
+              <div>
+                < AiOutlineShoppingCart style={{fontSize: 30, cursor: 'pointer'}} />
+              </div>
+              <div>
+                <Navegador destino='/carrinho' nome={<CgProfile style={{fontSize: 30, cursor: 'pointer'}} />}/>
+              </div>
+            </DivHeader>
           </nav>
       </HeaderStyle>
     </div>

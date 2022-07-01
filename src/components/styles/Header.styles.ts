@@ -41,7 +41,11 @@ const HeaderStyle = styled.header`
     }
   }
 `
-
+const DivHeader = styled.div`
+  display: flex;
+  
+`
 export {
-  HeaderStyle
+  HeaderStyle,
+  DivHeader
 }
