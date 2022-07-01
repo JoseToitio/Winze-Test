@@ -32,7 +32,28 @@ export const ContainerDetails = styled.div`
       width: auto;
       height: auto;
     }
+    .quantityProduto {
+      display: flex;
+      margin-top: 40px;
+      width: 80%;
+      background-color: #7ebc43;
+      border-color: #7ebc43;
+      color: #fff;
+      font-size: 16px;
+      height: 48px;
+      line-height: 16px;
+      border-radius: 4px;
+      border-style: solid;
+      border-width: 2px;
+      font-weight: 700;
+      padding: 0 32px;
 
+      align-items: center;
+      justify-content: space-around;
+      span {
+        cursor: pointer;
+      }
+  }
     .spanTag {
       color: #c81a79;
       font-weight: bold;
