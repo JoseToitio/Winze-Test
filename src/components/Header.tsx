@@ -36,10 +36,10 @@ export default function Header() {
                 <AiOutlineSearch style={{fontSize: 30, cursor: 'pointer'}} />
               </div>
               <div>
-                < AiOutlineShoppingCart style={{fontSize: 30, cursor: 'pointer'}} />
+                < CgProfile style={{fontSize: 30, cursor: 'pointer'}} />
               </div>
               <div>
-                <Navegador destino='/carrinho' nome={<CgProfile style={{fontSize: 30, cursor: 'pointer'}} />}/>
+                <Navegador destino='/carrinho' nome={<AiOutlineShoppingCart style={{fontSize: 30, cursor: 'pointer'}} />}/>
               </div>
             </DivHeader>
           </nav>
