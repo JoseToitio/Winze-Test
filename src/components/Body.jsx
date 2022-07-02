@@ -63,10 +63,14 @@ export default function Body() {
   }, [wine, inputValue]);
 
   const handleClick = (item) => {
-    let products = JSON.parse(localStorage.getItem('products')) || [];
-    products.push(item);
-    localStorage.setItem('products', JSON.stringify(products));
-    
+    try {
+      item['quantidade'] = 1;
+      let products = JSON.parse(localStorage.getItem("products")) || [];
+      products.push(item);
+      localStorage.setItem("products", JSON.stringify(products));
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div>

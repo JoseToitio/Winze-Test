@@ -4,14 +4,19 @@ import Navegador from "./Navegador";
 import { ButtonBack, ContainerDetails, DivSize } from "./styles/Details.styles";
 import { IoIosArrowBack } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
+
 export default function DetailsProducts(props) {
   const { wine } = useContext(GlobalContext);
   const [sum, setSum] = useState(1);
   const handleClick = (item, quantity) => {
+    try {
     item["quantidade"] = quantity;
     let products = JSON.parse(localStorage.getItem("products")) || [];
     products.push(item);
     localStorage.setItem("products", JSON.stringify(products));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

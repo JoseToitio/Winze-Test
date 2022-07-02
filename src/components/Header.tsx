@@ -20,9 +20,7 @@ export default function Header(props: any) {
     <div>
       <HeaderStyle>
           <nav>
-          <picture>
-            <img src={imageUrl} alt="wine Icon" />
-          </picture>
+            <Navegador destino='/' nome={<picture><img src={imageUrl} alt="wine Icon" style={{cursor: 'pointer'}}/></picture>}/>
             <ul>
               <li>
                 <Navegador destino="/clube" nome="Clube"/>
