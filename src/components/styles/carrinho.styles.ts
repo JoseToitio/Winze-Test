@@ -12,7 +12,7 @@ export const CardItens = styled.div`
   margin: 40px;
   max-width: 400px;
   img {
-    max-width: 100px;
+    max-width: 150px;
   }
 
 `
