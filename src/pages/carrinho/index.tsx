@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
-import {EmptyCart, CardItens, DivCard, SuperDiv} from './carrinho.styles';
+import {EmptyCart, CardItens, DivCard, SuperDiv} from '../../components/styles/carrinho.styles';
 
 export default function Carrinho() {
   const [product, setProduct] = useState([]);
@@ -38,7 +38,7 @@ export default function Carrinho() {
     let initialValue = 0;
     let obj = product;
     let sum = obj.reduce((acc, curValue:Produtos) => {
-      return acc + curValue.price
+      return acc + curValue.price * curValue.quantidade
     }, initialValue)
     setTotalPrice(sum);
   }, [product]);
@@ -64,7 +64,7 @@ export default function Carrinho() {
                 <div>
                   <h4>{p.name}</h4>
                   <p>Quantidade: {p.quantidade}</p>
-                  <p>R$ {p.price}</p>
+                  <p>R$ {(p.price.toFixed(2))}</p>
                   <button onClick={() => (removeProduct(p.id))}>Remover</button>
                 </div>
               </CardItens>

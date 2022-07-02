@@ -64,9 +64,9 @@ export default function DetailsProducts(props) {
                 </div>
                 <div className="priceDiv">
                   <h1>
-                    R$ <span>{wine.priceMember}</span>
+                    R$ <span>{wine.priceMember.toFixed(2)}</span>
                   </h1>
-                  <h5>{`NÃO SÓCIO R$ ${wine.priceNonMember}/UN`}</h5>
+                  <h5>{`NÃO SÓCIO R$ ${wine.priceNonMember.toFixed(2)}/UN`}</h5>
                 </div>
                 <h4>Comentário do Sommelier</h4>
                 <p>{wine.sommelierComment}</p>

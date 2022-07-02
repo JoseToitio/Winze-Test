@@ -164,7 +164,7 @@ export default function Body() {
                   />
                   <div className="priceDiv">
                     <div className="discountDiv">
-                      <span>R${w.price}</span>
+                      <span>R${w.price.toFixed(2)}</span>
                       <div className="divDiscount">
                         <span className="discount">{w.discount}% OFF</span>
                       </div>
@@ -173,10 +173,10 @@ export default function Body() {
                       SÓCIO WINE{" "}
                       <span>
                         <span className="cifrao">R$</span>
-                        {w.priceMember}
+                        {w.priceMember.toFixed(2)}
                       </span>
                     </h1>
-                    <h5>{`NÃO SÓCIO R$ ${w.priceNonMember}/UN`}</h5>
+                    <h5>{`NÃO SÓCIO R$ ${w.priceNonMember.toFixed(2)}/UN`}</h5>
                   </div>
                 </Container>
                 <DivButton>

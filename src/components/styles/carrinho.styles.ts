@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const EmptyCart = styled.div`
   display: flex;
   text-align: center;
@@ -24,7 +23,7 @@ export const DivCard = styled.div`
   width: 50%;
   button {
     margin-top: 8px;
-    width: 50%;
+    width: 150px;
     background-color: #7ebc43;
     border-color: #7ebc43;
     color: #fff;
@@ -36,8 +35,6 @@ export const DivCard = styled.div`
     border-width: 2px;
     cursor: pointer;
     font-weight: 700;
-    padding: 0 32px;
-    text-align: center;
   }
 `
 
