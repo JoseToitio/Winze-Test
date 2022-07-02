@@ -45,7 +45,17 @@ const DivHeader = styled.div`
   display: flex;
   
 `
+
+const InputSearch = styled.div`
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  input {
+    width: 50%;
+  }
+`
 export {
   HeaderStyle,
-  DivHeader
+  DivHeader,
+  InputSearch
 }

@@ -1,12 +1,21 @@
-import { HeaderStyle, DivHeader } from './styles/Header.styles';
-import React from 'react';
+import { HeaderStyle, DivHeader, InputSearch } from './styles/Header.styles';
+import React, { useState } from 'react';
 import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import Navegador from '../components/Navegador';
 
 const imageUrl ='https://img.wine.com.br/logo/wine/black/wine.svg'
 
-export default function Header() {
+export default function Header(props: any) {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    if(click === false) {
+      setClick(true);
+    } else {
+      setClick(false);
+    }
+  }
   return (
     <div>
       <HeaderStyle>
@@ -33,7 +42,7 @@ export default function Header() {
             </ul>
             <DivHeader>
               <div>
-                <AiOutlineSearch style={{fontSize: 30, cursor: 'pointer'}} />
+                <AiOutlineSearch style={{fontSize: 30, cursor: 'pointer'}} onClick={handleClick} />
               </div>
               <div>
                 < CgProfile style={{fontSize: 30, cursor: 'pointer'}} />
@@ -44,6 +53,10 @@ export default function Header() {
             </DivHeader>
           </nav>
       </HeaderStyle>
+      <InputSearch>
+        {click && <input onChange={props.onChange} type='text' />}
+      </InputSearch>
+
     </div>
   )
 }
