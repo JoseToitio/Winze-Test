@@ -10,10 +10,10 @@ export default function DetailsProducts(props) {
   const [sum, setSum] = useState(1);
   const handleClick = (item, quantity) => {
     try {
-    item["quantidade"] = quantity;
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    products.push(item);
-    localStorage.setItem("products", JSON.stringify(products));
+      item["quantidade"] = quantity;
+      let products = JSON.parse(localStorage.getItem("products")) || [];
+      products.push(item);
+      localStorage.setItem("products", JSON.stringify(products));
     } catch (error) {
       console.log(error);
     }
@@ -37,14 +37,16 @@ export default function DetailsProducts(props) {
           .filter((wine) => wine.id == props.id)
           .map((wine) => (
             <ContainerDetails key={wine.id}>
-              <picture>
+              <picture className="image">
                 <img src={wine.image} alt={wine.name} />
               </picture>
               <DivSize></DivSize>
-              <div>
-                <span className="spanTag">{`Vinhos >  ${wine.country}  `}</span>
-                <span style={{ color: "gray" }}>{`> ${wine.region}`}</span>
-                <h1 className="name">{wine.name}</h1>
+              <div className="div-primary">
+                <div className="div-bugada">
+                  <p className="spanTag">{`Vinhos >  ${wine.country}  `}</p>
+                  <p style={{ color: "gray" }}>{`> ${wine.region}`}</p>
+                </div>
+                  <h1 className="name">{wine.name}</h1>
                 <div className="divCountry">
                   <div className="picture">
                     <picture>
@@ -54,14 +56,17 @@ export default function DetailsProducts(props) {
                   <p>{wine.country}</p>
                   <p>{wine.classification}</p>
                   <p>{wine.size || wine.volume}</p>
-                  <AiFillStar color="orange" />
-                  <AiFillStar color="orange" />
-                  <AiFillStar color="orange" />
-                  <AiFillStar color="orange" />
-                  <p>{`(${
+                  <AiFillStar color="orange" className="avaliations" />
+                  <AiFillStar color="orange" className="avaliations" />
+                  <AiFillStar color="orange" className="avaliations" />
+                  <AiFillStar color="orange" className="avaliations" />
+                  <p className="avaliations">{`(${
                     wine.avaliations ? wine.avaliations : wine.rating
                   })`}</p>
                 </div>
+                <picture className="image-container">
+                  <img src={wine.image} alt={wine.name} />
+                </picture>
                 <div className="priceDiv">
                   <h1>
                     R$ <span>{wine.priceMember.toFixed(2)}</span>
@@ -69,15 +74,16 @@ export default function DetailsProducts(props) {
                   <h5>{`NÃO SÓCIO R$ ${wine.priceNonMember.toFixed(2)}/UN`}</h5>
                 </div>
                 <h4>Comentário do Sommelier</h4>
-                <p>{wine.sommelierComment}</p>
+                <div className="sommelierComment">
+                  <p >{wine.sommelierComment}</p>
+                </div>
                 <div className="quantityProduto">
                   <span
                     onClick={() => {
-                      if(sum > 1){
+                      if (sum > 1) {
                         const a = sum - 1;
                         setSum(a);
                       }
-
                     }}
                   >
                     -
@@ -91,7 +97,12 @@ export default function DetailsProducts(props) {
                   >
                     +
                   </span>
-                  <span onClick={() => handleClick(wine, sum)}>Adicionar</span>
+                  <span
+                    className="span-adicionar"
+                    onClick={() => handleClick(wine, sum)}
+                  >
+                    Adicionar
+                  </span>
                 </div>
               </div>
             </ContainerDetails>

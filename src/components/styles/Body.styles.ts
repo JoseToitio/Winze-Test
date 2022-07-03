@@ -142,6 +142,15 @@ export const DivButton = styled.div`
     font-weight: 700;
     padding: 0 32px;
     text-align: center;
+
+    &:hover {
+      background-color: #3e8e41
+    }
+    &:active {
+      background-color: #3e8e41;
+      /* box-shadow: 0 2px #666; */
+      transform: translateY(3px);
+    }
   }
 `
 

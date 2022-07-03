@@ -17,12 +17,19 @@ export const ButtonBack = styled.div`
     display: flex;
     align-items: center;
   }
+
+  @media(max-width: 800px) {
+    display: none;
+    
+  }
 `
 
 export const ContainerDetails = styled.div`
   display: flex;
   justify-content: center;
-  
+  .image-container {
+    display: none;
+  }
   div {
    width: 480px;
    padding-left: 30px ;
@@ -79,7 +86,9 @@ export const ContainerDetails = styled.div`
       margin: 0 8px 0 0;
     }
   }
-
+  .sommelierComment {
+    padding-left: 0px;
+  }
   .priceDiv {
     padding: 0;
     margin-top: 50px;
@@ -97,8 +106,71 @@ export const ContainerDetails = styled.div`
       color: gray
     }
   }
+
+  @media(max-width: 800px) {
+    .image{
+      display: none;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+    .name {
+      text-align: center;
+      width: 100%;
+      margin-top: 0px;
+    }
+    .div-bugada {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-left: 0px;
+    }
+    .div-primary {
+      width: 100%;
+      padding-left: 0px;
+    }
+    .divCountry {
+      width: 100%;
+      justify-content: center;
+    }
+    .avaliations {
+      display: none;
+    }
+    .priceDiv {
+      width: 100%;
+      h1 {
+        padding-left: 20px;
+      }
+      h5 {
+        padding-left: 20px;
+      }
+      margin: 0px;
+    }
+
+    h4 {
+      padding-left: 20px;
+    }
+    .sommelierComment{
+      width: 100%;
+      text-align: left;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .quantityProduto {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: 100%;
+    }
+  }
+  
 `
 
 export const DivSize = styled.div`
   max-width: 100px;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
