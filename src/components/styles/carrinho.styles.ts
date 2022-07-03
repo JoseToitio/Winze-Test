@@ -46,4 +46,14 @@ export const SuperDiv = styled.div`
     font-size: 23px;
     font-weight: 700;
   }
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    .totalPrice {
+      text-align: center;
+    }
+  }
 `
