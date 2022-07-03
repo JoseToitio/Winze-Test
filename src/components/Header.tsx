@@ -1,5 +1,6 @@
 import { HeaderStyle, DivHeader, InputSearch } from './styles/Header.styles';
 import React, { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import Navegador from '../components/Navegador';
@@ -20,10 +21,11 @@ export default function Header(props: any) {
     <div>
       <HeaderStyle>
           <nav>
-            <Navegador destino='/' nome={<picture><img src={imageUrl} alt="wine Icon" style={{cursor: 'pointer'}}/></picture>}/>
-            <ul>
+            <GiHamburgerMenu className='burger-menu'/>
+            <Navegador destino='/'  nome={<picture><img className='icon-logo' src={imageUrl} alt="wine Icon" style={{cursor: 'pointer'}}/></picture>}/>
+            <ul className='div-nav'>
               <li>
-                <Navegador destino="/clube" nome="Clube"/>
+                <Navegador destino="/" nome="Clube"/>
               </li>
               <li>
                 <a>Loja</a>
@@ -42,7 +44,7 @@ export default function Header(props: any) {
               <div>
                 <AiOutlineSearch style={{fontSize: 30, cursor: 'pointer'}} onClick={handleClick} />
               </div>
-              <div>
+              <div className='profile'>
                 < CgProfile style={{fontSize: 30, cursor: 'pointer'}} />
               </div>
               <div>

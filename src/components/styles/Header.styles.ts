@@ -10,6 +10,10 @@ const HeaderStyle = styled.header`
   height: 88px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+
+  .burger-menu {
+    display: none;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -38,6 +42,24 @@ const HeaderStyle = styled.header`
     padding-left: 30px;
     a {
       padding-right: 20px;
+    }
+  }
+  @media(max-width: 800px) {
+    width: 100%;
+    .profile {
+      display: none;
+    }
+    .div-nav {
+      display: none;
+    }
+    .burger-menu{
+      display: flex;
+      font-size: 25px;
+      margin-right: 40px;
+    }
+    .icon-logo {
+      width: 100px;
+      max-width: 120px;
     }
   }
 `
