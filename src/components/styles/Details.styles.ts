@@ -27,6 +27,11 @@ export const ButtonBack = styled.div`
 export const ContainerDetails = styled.div`
   display: flex;
   justify-content: center;
+
+  .div-bugada {
+    display: flex;
+    padding: 0px;
+  }
   .image-container {
     display: none;
   }
