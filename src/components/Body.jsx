@@ -143,7 +143,7 @@ export default function Body() {
         </Busca>
         <DivContainer>
           {wineFilter
-            .filter((wine) => wine.name.startsWith(search))
+            .filter((wine) => wine.name.includes(search))
             .map((w) => (
               <div key={w.id}>
                 <Container>
