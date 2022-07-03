@@ -76,7 +76,7 @@ export default function Body() {
     <div>
       <Header onChange={searchText} />
       <DivPrincipal>
-        <Busca>
+        <Busca className="search-filter">
           <p>{wineFilter.length} produtos encontrados</p>
           <p style={{ fontWeight: "bold" }}>Refine sua busca</p>
           <p>Por preço</p>
@@ -142,6 +142,9 @@ export default function Body() {
           </div>
         </Busca>
         <DivContainer>
+          <div className="div-length-product">
+            <p>{wine.length} <span>Produtos Encontrados</span></p>
+          </div>
           {wineFilter
             .filter((wine) => wine.name.includes(search))
             .map((w) => (

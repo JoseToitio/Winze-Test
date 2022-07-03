@@ -72,8 +72,19 @@ const InputSearch = styled.div`
   display: flex;
   margin-top: 10px;
   justify-content: center;
+  
   input {
     width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    @media(max-width: 800px) {
+      width: 80%;
+    }
   }
 `
 export {

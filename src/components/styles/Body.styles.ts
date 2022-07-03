@@ -96,6 +96,30 @@ export const DivContainer = styled.div`
   div {
     justify-content: center;
   }
+  .div-length-product {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+
+    .div-length-product {
+      width: 80%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border-bottom-color: gray;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+    }
+    p {
+      font-weight: bold;
+    }
+    span{
+      margin-left: 5px;
+      color: gray;
+    }
+  }
 `
 
 export const DivButton = styled.div`
@@ -139,4 +163,10 @@ export const Busca = styled.div`
 
 export const DivPrincipal = styled.div`
   display: flex;
+
+  @media (max-width: 800px) {
+    .search-filter {
+      display: none;
+    } 
+  }
 `
